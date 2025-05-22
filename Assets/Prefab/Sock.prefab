@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 3f1827c2-c682-46d8-999e-0954e37e833e
-  instanceId: 9c9d2a0f-a5c5-4b50-80aa-9ea30e340376
+  instanceId: ff455629-d5d1-4aec-8c71-6a15273b9480
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 20b9ad69-c205-488d-a6b2-d3d7ca6c1e53
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: ef402892-df32-46f3-aa50-334f209e4962
+  instanceId: c81dc939-ac2d-4802-9ddc-ec34e53c0fad
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
@@ -3025,7 +3025,8 @@ MonoBehaviour:
   BodyRenderer: {fileID: 4300033719381482675}
   sockMaterial: {fileID: 0}
   materialID: 0
-  matchers: {fileID: 0}
+  matcher: {fileID: 0}
+  spawner: {fileID: 0}
 --- !u!65 &776470023670855804
 BoxCollider:
   m_ObjectHideFlags: 0

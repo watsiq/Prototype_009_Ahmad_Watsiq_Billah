@@ -59,6 +59,7 @@ public class SockMatchers : MonoBehaviour
                 if (currentPortal != null)
                 {
                     currentPortal.SetActive(false);
+                    currentPortal = null;
                 }
 
                 FindFirstObjectByType<SockSpawner>()?.CheckIfAllSocksMatched(matchedSockObjects);

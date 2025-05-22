@@ -5482,7 +5482,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 533645752}
-  m_PlaneDistance: 0.17
+  m_PlaneDistance: 0.4
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -15202,7 +15202,7 @@ RectTransform:
   m_GameObject: {fileID: 1039177510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.85269, y: 0.85269, z: 0.85269}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2123018764}
@@ -15210,7 +15210,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135, y: 110}
+  m_AnchoredPosition: {x: 29.4, y: 20}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1039177512
@@ -21077,14 +21077,14 @@ RectTransform:
   m_GameObject: {fileID: 1462847940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.85269, y: 0.85269, z: 0.85269}
+  m_LocalScale: {x: 0.54619056, y: 0.54619056, z: 0.54619056}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 367469818}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 333, y: 111}
+  m_AnchoredPosition: {x: 136.9, y: 20}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1462847942
@@ -21753,7 +21753,7 @@ RectTransform:
   m_GameObject: {fileID: 1502447090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.85269, y: 0.85269, z: 0.85269}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2041517009}
@@ -21761,7 +21761,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -222, y: 110}
+  m_AnchoredPosition: {x: -91.4, y: 20}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1502447092
@@ -23242,7 +23242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1601081623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28939,14 +28939,14 @@ RectTransform:
   m_GameObject: {fileID: 1836331955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.85269, y: 0.85269, z: 0.85269}
+  m_LocalScale: {x: 0.54619056, y: 0.54619056, z: 0.54619056}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 367469818}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24.000004, y: 111}
+  m_AnchoredPosition: {x: 17, y: 20}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1836331957
@@ -29034,7 +29034,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -70.767426, y: 0, z: 56.013123, w: 0}
+  m_margin: {x: -70.767426, y: 0, z: 158.45964, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -34049,7 +34049,7 @@ PrefabInstance:
     - target: {fileID: 4300033719381482675, guid: af943a3ebe9f2544eafb49f7f6f0db0d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: 44ea774c6dd1f974f890648aeacf01be, type: 2}
     - target: {fileID: 4373750319561989837, guid: af943a3ebe9f2544eafb49f7f6f0db0d, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -34068,7 +34068,7 @@ PrefabInstance:
       objectReference: {fileID: 216884259}
     - target: {fileID: 6349675673978698407, guid: af943a3ebe9f2544eafb49f7f6f0db0d, type: 3}
       propertyPath: m_VersionIndex
-      value: 11972
+      value: 11990
       objectReference: {fileID: 0}
     - target: {fileID: 6349675673978698407, guid: af943a3ebe9f2544eafb49f7f6f0db0d, type: 3}
       propertyPath: m_SelectedVertices.Array.size
