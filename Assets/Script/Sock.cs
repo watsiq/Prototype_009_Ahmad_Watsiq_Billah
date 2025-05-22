@@ -6,6 +6,8 @@ public class Sock : MonoBehaviour
     public Material sockMaterial;
     public string materialID;
     public SockMatchers matcher;
+    
+    public SockSpawner spawner;
 
     private bool isMatched = false;
 
