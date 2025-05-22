@@ -4511,7 +4511,7 @@ MonoBehaviour:
     id: 4
   - material: {fileID: 2100000, guid: afd13376a0a096741975a5c593d7a412, type: 2}
     id: 5
-  sockMatchers: {fileID: 0}
+  sockMatchers: {fileID: 1886848816}
 --- !u!4 &278696425
 Transform:
   m_ObjectHideFlags: 0

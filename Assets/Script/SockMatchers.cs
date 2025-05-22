@@ -1,13 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class SockMatchers : MonoBehaviour
 {
-    private GameObject currentPortal;
+    private List<Sock> matchedSockObjects = new List<Sock>();
+    public GameObject currentPortal { get; private set; }
     private string activePairID = "";
     private int matchedSockEntered = 0;
 
-    
     [Header("Events")]
     public UnityEvent onMatch;
     public UnityEvent onMismatch;
@@ -20,16 +21,14 @@ public class SockMatchers : MonoBehaviour
     {
         if (sock1.IsMatch(sock2))
         {
-            Debug.Log("✅ Match!");
+            Debug.Log("Match!");
             onMatch?.Invoke();
 
-            // Spawn Portal jika belum ada
             if (currentPortal == null && portalPrefab != null && portalSpawnPoint != null)
             {
                 currentPortal = Instantiate(portalPrefab, portalSpawnPoint.position, portalSpawnPoint.rotation);
             }
 
-            // Simpan ID pasangan aktif & reset counter
             activePairID = sock1.materialID;
             matchedSockEntered = 0;
         }
@@ -39,35 +38,63 @@ public class SockMatchers : MonoBehaviour
             onMismatch?.Invoke();
         }
     }
-    
+
     public void SockEnteredPortal(Sock sock)
     {
         Debug.Log($"[Portal] Sock masuk: {sock.materialID}, Pair aktif: {activePairID}");
         if (sock.materialID == activePairID)
         {
             matchedSockEntered++;
-            Debug.Log($"[Portal] Match masuk ke-{matchedSockEntered}");
+            Debug.Log($"Menonaktifkan sock: {sock.gameObject.name}");
+            
+            sock.gameObject.SetActive(false); // Nonaktifkan sock
+            matchedSockObjects.Add(sock);
+
             if (matchedSockEntered >= 2)
             {
-                Debug.Log("[Portal] Kedua sock match masuk, portal akan hilang");
-                HidePortal(); // setelah 2 sock yang match masuk, portal hilang
+                matchedSockEntered = 0;
+                activePairID = "";
+                Debug.Log("[SockMatchers] Kedua sock masuk portal, sembunyikan portal");
+
+                if (currentPortal != null)
+                {
+                    currentPortal.SetActive(false);
+                }
+
+                FindFirstObjectByType<SockSpawner>()?.CheckIfAllSocksMatched(matchedSockObjects);
             }
         }
         else
         {
-            Debug.Log("[Portal] Sock ID tidak cocok, tidak dihitung sebagai match");
+            Debug.LogWarning("[SockMatchers] Sock materialID tidak cocok dengan activePairID");
         }
     }
 
+    public void DestroyMatchedSocks()
+    {
+        foreach (var sock in matchedSockObjects)
+        {
+            if (sock != null)
+                Destroy(sock.gameObject);
+        }
+
+        matchedSockObjects.Clear();
+
+        if (currentPortal != null)
+        {
+            Destroy(currentPortal);
+            currentPortal = null;
+        }
+    }
 
     public void HidePortal()
     {
         if (currentPortal != null)
         {
-            Destroy(currentPortal);
-            currentPortal = null;
-            activePairID = "";
-            matchedSockEntered = 0;
+            currentPortal.SetActive(false);
         }
+
+        activePairID = "";
+        matchedSockEntered = 0;
     }
 }
